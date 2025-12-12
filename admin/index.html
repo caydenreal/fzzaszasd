@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin — Fort Zumwalt</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="config.js" defer></script>
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <div class="container" style="padding-top:2rem;">
+    <div id="login-panel" class="panel">
+      <h2>Admin Login</h2>
+      <label>Password <input id="pw" type="password"></label>
+      <button id="login-btn">Login</button>
+      <p id="login-msg" class="muted"></p>
+    </div>
+
+    <div id="admin-panel" style="display:none;">
+      <h1>Admin Dashboard</h1>
+      <section>
+        <h3>Site Content Editor</h3>
+        <label>Home Title<input id="homeTitle"></label>
+        <label>Home Subtitle<input id="homeSub"></label>
+        <label>About Title<input id="aboutTitle"></label>
+        <label>About Body<textarea id="aboutBody"></textarea></label>
+        <label>Contact Title<input id="contactTitle"></label>
+        <label>Contact Body<textarea id="contactBody"></textarea></label>
+        <h4>Announcements (JSON)</h4>
+        <textarea id="announcements" style="min-height:120px"></textarea>
+        <div style="display:flex;gap:.6rem;margin-top:.6rem">
+          <button id="save-content">Save Content</button>
+          <button id="reset-content">Reset to Defaults</button>
+          <button id="export-content">Export JSON</button>
+          <button id="import-content">Import JSON</button>
+          <input type="file" id="import-file" style="display:none"/>
+        </div>
+      </section>
+
+      <section style="margin-top:1rem">
+        <h3>Messages (from Contact Form)</h3>
+        <button id="load-msgs">Load Messages</button>
+        <button id="clear-msgs">Clear Messages</button>
+        <div id="messages" style="margin-top:.6rem"></div>
+      </section>
+
+      <section style="margin-top:1rem">
+        <h3>Admin Settings</h3>
+        <label>Change Admin Password<input id="newpw" type="password"></label>
+        <button id="change-pw">Change Password</button>
+        <p id="pwmsg" class="muted"></p>
+      </section>
+
+      <section style="margin-top:1rem">
+        <button id="logout">Logout</button>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
